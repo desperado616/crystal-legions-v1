@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #4d96ff;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  background: linear-gradient(45deg, #4d96ff, #9d4edd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.currency {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid gold;
+}
+
+.game-container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  min-height: 600px;
+}
+
+.menu {
+  text-align: center;
+  padding: 40px;
+}
+
+.menu h2 {
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #4d96ff;
+}
+
+.menu button {
+  display: block;
+  width: 300px;
+  margin: 15px auto;
+  padding: 15px;
+  font-size: 1.2em;
+  background: linear-gradient(45deg, #4d96ff, #9d4edd);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.menu button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.shop-container {
+  display: flex;
+  gap: 30px;
+}
+
+.shop-section {
+  flex: 2;
+}
+
+.player-section {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.crystals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.crystal-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.crystal-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.crystal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.crystal-price {
+  background: gold;
+  color: black;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.crystal-name {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.crystal-type {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.crystal-class {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin: 5px 0;
+}
+
+.buy-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-btn:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.player-crystals {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.player-crystal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 2px solid;
+}
+
+.crystal-icon {
+  font-size: 1.5em;
+}
+
+.battle-controls {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.start-battle-btn {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.start-battle-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.start-battle-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.synergy-hint {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(157, 78, 221, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #9d4edd;
+}
+
+.battle-phase {
+  text-align: center;
+}
+
+.rewards-phase {
+  text-align: center;
+  padding: 40px;
+}
+
+.rewards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.reward-item {
+  padding: 20px;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid gold;
+  min-width: 150px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.nft-demo button {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  background: linear-gradient(45deg, #0077ff, #00d4ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nft-demo button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
